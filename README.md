@@ -1,2 +1,2 @@
 # turnero
-sistema de turnos
+ sistema de asignacion y administracion de turnos
