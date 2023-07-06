@@ -45,8 +45,7 @@ function procesarSolicitud(){
 
 		var jsonData = JSON.parse(conexion.responseText);
 		var noTurno = document.getElementById('turno');
-	 
-	 	noTurno.innerHTML = jsonData.turno;
+		noTurno.innerHTML = jsonData.turno;
 
 	}
 

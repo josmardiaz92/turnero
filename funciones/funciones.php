@@ -25,48 +25,28 @@
 		$resultado = false;
 		/* ejecutar multi consulta */
 		if (mysqli_multi_query($con, $sql)) {
-		  
-		    do {
-		  
+			do {
 		        /* almacenar primer juego de resultados */
-		        /*if ($result = mysqli_store_result($con)) {
-		  
-		            /*while ($row = mysqli_fetch_row($result)) {
-		  
-		                printf("%s\n", $row[0]);
-		  
-		            }
-
-		  			
-		            mysqli_free_result($result);
-		  
-		        }*/
-		  
-				  $resultado = true;
-
+				/*if ($result = mysqli_store_result($con)) {
+				/*while ($row = mysqli_fetch_row($result)) {
+				printf("%s\n", $row[0]);
+				}
+				mysqli_free_result($result);
+				}*/
+				$resultado = true;
 		        /* mostrar divisor */
-		        /*if (mysqli_more_results($con)) {
-		  
+				/*if (mysqli_more_results($con)) {
 		            //printf("-----------------\n");
-		  
-		        }*/
-		  
-		    } while (mysqli_next_result($con));
-		
+				}*/
+			} while (mysqli_next_result($con));
 		}
-
 		return $resultado;
-	
 	}
 
 	function limpiar($con,$valor){
-	
 		$filtro=htmlspecialchars($valor);
-	
 		$filtro=mysqli_real_escape_string($con,$filtro);
-	
 		return $filtro;
-	
 	}
 
 	function convertir_fecha($fecha){
@@ -101,7 +81,7 @@
 	
 			if(!isset($datos[$i]) || empty($datos[$i]) || $datos[$i]=='ninguno'){
 	
-				 $valor=false;
+				$valor=false;
 	
 				break;
 	

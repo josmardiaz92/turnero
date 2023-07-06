@@ -216,9 +216,7 @@
 					actualizarAtencion($con, $idCaja, $turno);
 					
 					$turnosAtencion=turnosEnAtencion($con,$idCaja);
-
-	 				$resultado=mysqli_fetch_assoc($turnosAtencion);	
-
+					$resultado=mysqli_fetch_assoc($turnosAtencion);	
 					$turno=$resultado['turno'];
 					
 					$ocupado=true;
@@ -236,19 +234,19 @@
 				}//veriricar que no haya mas turnos en atencion
 								
 				$respuesta=array('status' => $status,
-					             'mensaje' => $mensaje,
-					             'turno' => $turno, 
-					             'ocupado' => $ocupado,
-					             'idCaja' => $idCaja);		
+								'mensaje' => $mensaje,
+								'turno' => $turno, 
+								'ocupado' => $ocupado,
+								'idCaja' => $idCaja);		
 			break;
 
 			default:
 				
 				$respuesta=array('status' => 'error', 
-					             'mensaje' => 'Peticion desconocida', 
-					             'turno' => '000', 
-					             'opcuado' => false, 
-					             'idCaja' => '0');																	
+								'mensaje' => 'Peticion desconocida', 
+								'turno' => '000', 
+								'opcuado' => false, 
+								'idCaja' => '0');																	
 
 			break;
 		

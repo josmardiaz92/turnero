@@ -13,10 +13,8 @@
 
     </head>
 	<body>
-
-    	<div class="contenedor-principal">
-
-        	<?php
+	<div class="contenedor-principal">
+		<?php
 
 					require_once('funciones/conexion.php');
 					require_once('funciones/funciones.php');

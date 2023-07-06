@@ -4,15 +4,15 @@ var conexion = '';
 function conectarViaGet(funcion = '', fichero = ''){
 
 	conexion = ajax();
-  	conexion.onreadystatechange = funcion;
- 	conexion.open('GET', fichero,  true);
-  	conexion.send(null);	
+	conexion.onreadystatechange = funcion;
+	conexion.open('GET', fichero,  true);
+	conexion.send(null);	
 
 }
 
 function conectarViaPost(funcion = '', 
-	                     fichero = '', 
-	                     datos = ''){
+						fichero = '', 
+						datos = ''){
 
 	conexion=ajax();
 	conexion.onreadystatechange=funcion;
@@ -68,9 +68,9 @@ function cerrarForm(e){
 }
 
 function agregarEvento(elemento = '',
-	                   evento = '',
-	                   funcion = '',
-	                   captura = ''){
+						evento = '',
+						funcion = '',
+						captura = ''){
 	
 	if(elemento.addEventListener){
 
